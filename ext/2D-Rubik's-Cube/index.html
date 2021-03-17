@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rubik's cube 2D</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Style.CSS">
+        <link rel="icon" href="/../img/ico1.png" id="light-scheme-icon">
+    </head>
+    
+	<body>
+        <div id="divContent">
+            <canvas id="Rubik" width="300" height="300"></canvas>
+            <button id="b1" onclick="button(1)">
+                1
+            </button>
+            <button id="b2" onclick="button(2)">
+                2
+            </button>
+            <button id="b3" onclick="button(3)">
+                3
+            </button>
+            <button id="b4" onclick="button(4)">
+                4
+            </button>
+            <button id="b5" onclick="button(5)">
+                5
+            </button>
+            <button id="b6" onclick="button(6)">
+                6
+            </button>
+            <button id="randomise" onclick="randomise()">
+                randomise
+            </button>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+
+
+    <script>
+		document.querySelector('[style*="text-align: right;position: fixed;z-index:9999999"]').style.visibility= "hidden";
+	</script>
+    
+</html>

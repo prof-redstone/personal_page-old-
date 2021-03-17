@@ -1,0 +1,341 @@
+body{
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: black;
+}
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+#backgroundPage{
+    height: 0px;
+}
+
+/* Page n1 */
+
+#backgroundPage1{
+    position: fixed;
+    z-index: 1;
+}
+
+#backgroundPage2{
+    position: fixed;
+}
+
+#FrontPage1{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#FrontPage2{
+    position: fixed;
+    margin-top: 100vh;
+}
+
+.BTNchangePage {
+    display: flex;
+    position: relative;
+    align-self: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#hackTitleDiv{
+    display: flex;
+    /*width: 99vw;
+    height: 90vh;*/
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+}
+
+div.corpsdepage{
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 98vw;
+    height: 100vh;
+}
+
+.arrowChangePage{
+    margin-bottom: 8vh;
+    position: relative;
+    animation: giggleArrow 1s ease infinite;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 100%;
+    padding: 10px 10px 10px 10px;
+    width: 6vw;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+}
+.arrowChangePage:hover{
+    /*background-color: rgba(255, 255, 255, 0.144);*/
+    transition: 0.2s;
+    border-color: rgba(255, 255, 255, 0.37);
+}
+
+
+.arrowChangePage>img{
+    width: 5vw;
+    height: 5vw;
+    transition: 0.60s;
+}
+.arrowChangePage:hover>img{
+    transition: 0.60s;
+    transform: rotate(360deg);
+}
+
+.previewBTNpage{
+    position: absolute;
+    top: 90vh;
+    right: 50vw;
+    transform: translate(+50%,-50%);
+}
+
+.hack{
+    font-family: 'Comic sans', sans-serif;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:12vw;
+    text-align: center;
+    user-select: none;
+}
+
+.hackText{
+    text-align: center;
+    user-select: none;
+    width: 90vw;
+}
+
+.mouvement1{
+    position: absolute;
+    animation: giggle 1s ease infinite;
+}
+.mouvement2{
+    position: absolute;
+    animation: giggle 1s ease infinite;
+    animation-delay:-0.67s;
+}
+.mouvement3{
+    position: absolute;
+    animation: giggle 1s ease infinite;
+    animation-delay:-0.33s;
+}
+
+.r {
+    color:#f00;
+    margin-right: 3px;
+    animation: mouvAnimationR 5s infinite;
+}
+.g {
+    color:#0f0;
+    animation-delay:-0.67s;
+    animation: mouvAnimationG 4s infinite;
+    mix-blend-mode: difference;
+}
+.b {
+    color:#00f;
+    animation-delay:-0.33s;
+    margin-left: 3px;
+    animation: mouvAnimationB 7s infinite;
+    mix-blend-mode: difference;
+}
+
+.BlinkCursor{
+    opacity: 0;
+}
+
+
+@keyframes giggleArrow {
+    0%, 100% {
+       transform:translate(-0%,-3%) translateY(-2px);
+    }
+    50% {
+       transform:translate(-0%,+3%) translateY(2px);
+    }
+}
+
+@keyframes giggle {
+    0%, 100% {
+       transform:translate(-50%,-50%) translateY(-2px);
+    }
+    50% {
+       transform:translate(-50%,-50%) translateY(2px);
+    }
+}
+
+@keyframes mouvAnimationR{
+    9%{
+        padding-left: 0px;
+    }
+    10%{
+        padding-left: 50px;
+    }
+    11%{
+        padding-left: 50px;
+    }
+    12%{
+        padding-left: 0px;
+    }
+}
+
+@keyframes mouvAnimationB{
+    50%{
+        padding-top: 0px
+    }
+    51%{
+        padding-top: 20px
+    }
+    52%{
+        padding-top: 0px
+    }
+    60%{
+        padding-top: 0px
+    }
+    61%{
+        padding-top: 20px
+    }
+    62%{
+        padding-top: 0px
+    }
+}
+
+@keyframes mouvAnimationG{
+    50%{
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+    51%{
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+    54%{
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+    55%{
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    60%{
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    61%{
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+/* transistion */
+
+#backgroundPage1{
+    animation-fill-mode: none;
+    transition: 0.6s ease-in !important;
+}
+
+#FrontPage1{
+    animation-fill-mode: none;
+    transition: 0.6s ease-in !important;
+}
+
+#FrontPage2{
+    animation-fill-mode: none;
+    transition: 0.8s ease-out !important;
+}
+
+.TranslateTop1{
+    transform: translateY(-100%) !important;
+}
+
+.TranslateTop2{
+    transform: translateY(-100%) !important;
+}
+
+.TranslateRight1{
+    transform: translateX(100%) !important;
+}
+
+
+/* Page n2 */
+
+#buttonTitle {
+    bottom: 20px;
+    right: 30px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(20, 20, 20, 0);
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+#buttonTitle:hover{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+
+li.liLink{
+    margin-top: 10px;
+    position: relative;
+    display: block;
+    user-select: none;
+}
+
+li.liLink:hover{
+    user-select: auto;
+}
+
+
+a.glitchEffect{
+    position: relative;
+    text-decoration: none;
+    color: #DDD;
+    font: 2.3vh Helvetica, sans-serif;
+}
+
+a.glitchEffect:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #99F;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+a.glitchEffect:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+
+#ul1{
+    margin-top: 3%;
+    margin-left: 1%;
+    display: inline-block;
+    padding: 2%;
+    background-color: rgba(17, 17, 17, 0.76);
+    border-radius: 2%;
+}

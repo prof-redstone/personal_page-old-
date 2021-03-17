@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ಠ_ಠ</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ext/cssExtFiles/indexPage.CSS">
+    <link rel="icon" href="img/ico1.png" id="light-scheme-icon">
+</head>
+
+<body onmousemove="MoveMouse(event)">
+    <div onmousemove="MouseCoordonate(event);" onmousedown="Click(true)" onmouseup="Click(false)">
+        <div id="backgroundPage"> 
+            <div id="backgroundPage1">
+                <canvas id="MatrixWand" class="CanvasBG" data-type="every" data-full_screen="True" width="500" height="300" ></canvas> <!-- width="1300" height="700" style ="width : 100% ;" -->
+            </div>
+
+            <div id="backgroundPage2">
+                <canvas id="MagicWand" class="MagicWand" data-full_screen="True" onmousemove="MouseCoordonate(event);" onmousedown="Click(true)" onmouseup="Click(false)"></canvas>
+            </div>
+
+        </div>
+
+        <div id="FrontPage">
+
+            <div id="FrontPage1">
+                <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100vh;">
+                    <div id="hackTitleDiv">
+                        <div class="r hack">
+                            <div class="mouvement1 hackText"></div>
+                        </div>
+                        <div class="g hack">
+                            <div class="mouvement2 hackText"></div>
+                        </div>
+                        <div class="b hack">
+                            <div class="mouvement3 hackText"></div>
+                        </div>
+                        <div style="opacity: 0;">
+                            <input type="text" id="InpMatText" name="InpMatText">
+                        </div>
+                    </div>
+
+
+                    <div class="nextBTNpage">
+                        <button class="BTNchangePage" onclick="changePage(0)" style="border: none; background-color: transparent;">
+                            <div class="arrowChangePage" >
+                                <img src="img/arrow2.png" alt="arrow">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="FrontPage2" style="height: 100vh; width: 100vw;">
+                <ul id="ul1">
+                    <li class="liLink" class="liLink">
+                        <a href="ext/neuron_web/index.html" class="glitchEffect">neuron_web</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/jeu-1_V2/index.html" class="glitchEffect">jeu-1_V2</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/matrixFullScreen/index.html" class="glitchEffect">Matrix full screen</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/2D-Rubik's-Cube/index.html" class="glitchEffect">Rubik's cube 2D</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/snow flake/index.html" class="glitchEffect">snow flake animation</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/fractal_tree/index.html" class="glitchEffect">fractale tree animation</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/environment_projectV2/index.html" class="glitchEffect">euro anglais project</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/GameOfLife/index.html" class="glitchEffect">Game of life</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/MagicWand/index.html" class="glitchEffect">MagicWand</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/MatrixWand/MatrixWand.html" class="glitchEffect">MatrixWand</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/DVDanimation/DVDanimation.html" class="glitchEffect">DVD animation background</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/ClockBackground/ClockBackground.html" class="glitchEffect">ClockBackground animation</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/hexagonalGride/index.html" class="glitchEffect">Hexagonal Game Of Life</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="ext/ClickMe/index.html" class="glitchEffect">Click me ...</a>
+                    </li>
+                    <li class="liLink">
+                        <a href="http://onbg.herokuapp.com" target="_blank" class="glitchEffect">Web socket online to play game</a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <div class="previewBTNpage">
+                    <button class="BTNchangePage" onclick="changePage(1)" style="border: none; background-color: transparent; user-select: none;">
+                        <div class="arrowChangePage">
+                            <img src="img/arrow1.png" alt="arrow">
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="ext/MatrixWand/MatrixWand.js"> </script>
+<script src="ext/MagicWand/NewMagicWand.js"> </script>
+<script src="ext/toolsFonctionJS/autoResizeCanvas.js"></script>
+<script src="index.js"></script>
+<script>
+    document.querySelector('[style*="text-align: right;position: fixed;z-index:9999999"]').style.visibility = "hidden";
+</script>
+
+</html>

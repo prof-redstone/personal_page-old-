@@ -1,0 +1,43 @@
+body{
+    margin:0px;
+}
+
+#b1{
+    position: absolute;
+    left:55px;
+    top:330px;
+}
+#b2{
+    position: absolute;
+    left:155px;
+    top:330px;
+}
+#b3{
+    position: absolute;
+    left:255px;
+    top:330px;
+}
+#b4{
+    position: absolute;
+    left:330px;
+    top:55px;
+}
+#b5{
+    position: absolute;
+    left:330px;
+    top:155px;
+}
+#b6{
+    position: absolute;
+    left:330px;
+    top:255px;
+}
+#randomise{
+    position: absolute;
+    left:330px;
+    top:330px;
+}
+
+#divContent{
+    margin: 20px;
+}
