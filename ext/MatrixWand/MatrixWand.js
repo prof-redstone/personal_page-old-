@@ -27,6 +27,8 @@ var symbols = []; //tableau qui contient les symbole
 
 var listStream = []; //tableau de stream
 
+var IntervalTime;
+
 
 function setup(){ //fonction de setup executer 1 fois 
     canvas = document.getElementById("MatrixWand");
@@ -45,7 +47,7 @@ function setup(){ //fonction de setup executer 1 fois
         canvas.width = innerWidth;
     }
 
-    IntervalTime = setInterval(loop, 35);
+    IntervalTime = setInterval(LoopMatrixWand, 35);
 }
 
 function UpdateDelteTime() {
@@ -56,7 +58,8 @@ function UpdateDelteTime() {
     return dt
 }
 
-function loop(){
+function LoopMatrixWand(){
+    console.log("loop")
     deltaTime = UpdateDelteTime()
 
     ctx.fillStyle = ColorBackground; //met le plan en noir
@@ -191,7 +194,13 @@ function Symbol(x, y, speed, first, opacité, YtoShow){
 
 }
 
-
+function changeFrameRateMatrixWand(val){
+    clearInterval(IntervalTime)
+    if(val != 0){
+        IntervalTime = setInterval(LoopMatrixWand, val);
+    }
+    //IntervalTimeMatrixMSactu = val;
+}
 
 function frameCounterAdd(){ //conteur de frame qui permet de changer le caractère du symbole
     frameCounter ++ ;
