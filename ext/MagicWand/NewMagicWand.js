@@ -31,11 +31,17 @@ function checkInstance(){
 
 checkInstance(); //important to start the detection of canvas element
 
+function UpdateDelteTime() {
+    let now = Date.now()
+    let dt = (now - lastUpdate) / 40
+    lastUpdate = now
+
+    return dt
+}
+
 
 function magicWand(theNumberOfMagicWandInstance, IDcanvas){
     
-
-
     this.setup = function(){
         this.IntervalFrameTime;
         this.IntervalFrameTimeMSactu = 10;
@@ -60,6 +66,7 @@ function magicWand(theNumberOfMagicWandInstance, IDcanvas){
 
         this.canvas = document.getElementById(this.IDcanvas);
         this.ctx = this.canvas.getContext("2d");
+
 
         this.mode = nb_random(1, 2);
 
@@ -87,9 +94,9 @@ function magicWand(theNumberOfMagicWandInstance, IDcanvas){
         }
 
         if (mooving) {
-            speedMultiplayer = 0.2
+            speedMultiplayer = 0.2 
         } else {
-            speedMultiplayer = 0.1
+            speedMultiplayer = 0.1 
         }
         mooving = false;
 
@@ -153,22 +160,31 @@ function magicWand(theNumberOfMagicWandInstance, IDcanvas){
         this.deletable = false;
         this.color;
         this.SpawnColor = SColor;
+        this.lastUpdate = Date.now();
+        this.deltaTime = 0;
         
-    
-    
         this.Init = function() {
             this.direction = nb_random(0, 360);
             this.speed = nb_random(1, 5);
             this.size = nb_random(4, 10);
         }
+
+        this.UpdateDelteTime = ()=>{
+            let now = Date.now()
+            let dt = (now - this.lastUpdate) / 9
+            this.lastUpdate = now
+            return dt
+        }
     
         this.Update = function() {
-            this.timeCounter++;
-            if (this.maxTime == this.timeCounter) {
+            this.deltaTime = this.UpdateDelteTime()
+
+            this.timeCounter += 1*this.deltaTime*0.8;
+            if (this.maxTime <= this.timeCounter) {
                 this.deletable = true;
             }
-            this.posX = this.posX + (this.speed * speedMultiplayer * Math.cos((this.direction * Math.PI) / 180));
-            this.posY = this.posY + (this.speed * speedMultiplayer * Math.sin((this.direction * Math.PI) / 180));
+            this.posX = this.posX + (this.speed * speedMultiplayer * this.deltaTime * Math.cos((this.direction * Math.PI) / 180));
+            this.posY = this.posY + (this.speed * speedMultiplayer * this.deltaTime * Math.sin((this.direction * Math.PI) / 180));
         }
     
         this.Draw = function() {

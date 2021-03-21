@@ -59,7 +59,6 @@ function UpdateDelteTime() {
 }
 
 function LoopMatrixWand(){
-    console.log("loop")
     deltaTime = UpdateDelteTime()
 
     ctx.fillStyle = ColorBackground; //met le plan en noir
