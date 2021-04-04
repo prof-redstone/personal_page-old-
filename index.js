@@ -45,18 +45,19 @@ function TypeWriterEnable() {
             deleteSpeed: 40,
             delay: 70,
             loop: true,
+            cursor: "",
         })
-        .typeString("Hey ^_^ ")
-        .pauseFor("5000").deleteChars(7)
-        .typeString("ow are you !? ")
+        .typeString("Hey ^_^")
+        .pauseFor("5000").deleteChars(6)
+        .typeString("ow are you !?")
         .pauseFor("5000").deleteChars(15)
-        .typeString("Write something ").pauseFor("1000").typeString("...").pauseFor("1000").typeString(" ...")
+        .typeString("Write something").pauseFor("1000").typeString(" ...").pauseFor("1000").typeString(" ...")
         .pauseFor("5000").deleteChars(24)
-        .typeString("Are you hacker\u00a0? ").pauseFor("2000").typeString("(\u00a0ಠ\u00a0ʖ̯\u00a0ಠ) ")
+        .typeString("Are you hacker\u00a0?").pauseFor("2000").typeString(" (\u00a0ಠ\u00a0ʖ̯\u00a0ಠ)")
         .pauseFor("5000").deleteChars(28)
         .typeString("ᓚᘏᗢ\u00a0ヾ(•ω•`)\nIt's my cat")
         .pauseFor("5000").deleteChars(23)
-        .typeString("ಠ-ಠ ").pauseFor("1000").deleteChars(3).typeString("3ಠ ").pauseFor("1000").deleteChars(3).typeString("oಠ ").pauseFor("1000").deleteChars(3).typeString("◡ಠ ")
+        .typeString("ಠ-ಠ").pauseFor("1000").deleteChars(2).typeString("3ಠ").pauseFor("1000").deleteChars(2).typeString("oಠ").pauseFor("1000").deleteChars(2).typeString("◡ಠ")
         .pauseFor("5000").deleteChars(4)
         .start()
 
