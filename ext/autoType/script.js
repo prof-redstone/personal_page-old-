@@ -1,17 +1,20 @@
-console.log("bonjour")
 
 var AutoTypeDiv = document.getElementsByClassName("autoType")
-
 var autoType1 = new AutoType({
     parent: AutoTypeDiv[0],
     glitchEffect: true,
-    arrayGlitchEffect: ["leet"]
+    arrayGlitchEffect: ["leet"],
+    writeSpeed: 50,
+    decrypt: true,
 })
-.Write("salut !")
+.State("Hey, ")
+.Write("salut ! ")
 .Break()
 .Write("mdr ")
-.Write("tranquille ou quoi ?")
+.State(" uuuuuuuuu ")
+.Write("tranquille ou quoi ? ")
 .Sleep(1000)
-.Write("comment ça va ?")
+.Write("comment ça va ? ")
 .Delete(1000)
 .Start()
+

@@ -15,6 +15,8 @@ class AutoType {
         this.actionNumber = 0; //compteur des actions
         this.actionChar = 0; //compteur pour les caractères
         this.start = false;
+        //different effect
+        this.decrypt = param.decrypt || false
 
     }
 
@@ -78,6 +80,14 @@ class AutoType {
                 }
             }, this.action[this.actionNumber][1]);
             this.actionNumber += 1
+        } else if (this.action[this.actionNumber][0] == 3) { //state
+            for (let i = this.state.length; i > 0; i--) {
+                this.DeleteChar()
+            }
+            for (let i = 0; i < this.action[this.actionNumber][1].length; i++) {
+                this.AddChar(this.action[this.actionNumber][1][i])
+            }
+            this.actionNumber += 1
         }
 
 
@@ -113,6 +123,10 @@ class AutoType {
 
     TypeElement(element) { //user
         this.typeElement = element;
+    }
+    State(str) {
+        this.action.push([3, str])
+        return this
     }
     Write(str) { //user
         this.action.push([1, str])
