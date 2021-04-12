@@ -68,7 +68,7 @@ div.corpsdepage{
 }
 
 .arrowChangePage{
-    margin-bottom: 8vh;
+    margin-bottom: 7vh;
     position: relative;
     animation: giggleArrow 1s ease infinite;
     background-color: rgba(255, 255, 255, 0);
@@ -112,7 +112,7 @@ div.corpsdepage{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    font-size:12vw;
+    font-size:11vw;
     text-align: center;
     user-select: none;
 }
